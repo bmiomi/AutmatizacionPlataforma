@@ -1,15 +1,13 @@
+from selenium import webdriver
+import configparser
 import unittest
+import time
 
 from Pagedriver.Indexpage import PageIndex
 from Pagedriver.Asidepage import AsidePege
 from Pagedriver.Framepage import FramePage
-import time
-from Configuracion.config import Config_A_Miomi
-import configparser
-from selenium import webdriver
 
 #*----funcional---*#
-
 
 class testXsales(unittest.TestCase):
     
@@ -27,11 +25,9 @@ class testXsales(unittest.TestCase):
         self.pageFrame=FramePage(self.pageaside.driver)
 
 
-
-
     def test_uno(self):
         if self.pageindex.SelectOpcion():
-            self.pageindex.login('nuo.vmendoza','xsm441')
+            self.pageindex.login('','')
             self.pageaside.OpcionSidebar()
             time.sleep(10)
 
